@@ -1,0 +1,32 @@
+{
+  "name": "@iyowei/create-templates",
+  "version": "1.0.1",
+  "description": "无论是创建 Cli、React、Node、Vue、Electron 等等之中的哪一个项目，都会需要用到模板，而这些模板文件也大都相同，小异可以维护在各自专门的脚手架中。",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyowei/create-templates.git"
+  },
+  "keywords": [
+    "iyowei"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iyowei/create-templates/issues"
+  },
+  "homepage": "https://github.com/iyowei/create-templates#readme",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "src/**"
+  ],
+  "engines": {
+    "node": ">=12.20.0"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
