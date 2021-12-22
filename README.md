@@ -1,25 +1,23 @@
-# createTemplates()
+# @iyowei/create-templates
 
-> 无论是创建 Cli、React、Node、Vue、Electron 等等之中的哪一个项目，都会需要用到模板，而这些模板文件也大都相同，小异可以维护在各自专门的脚手架中。
+> 统一提供模板，额外提供与模板紧密相关、有用的帮助函数。无论是创建 Cli、React、Node、Vue、Electron 等等之中的哪一个项目，都会需要用到模板，而这些模板文件也大都相同，小异可以维护在各自专门的脚手架中。
 
 ## 使用
 
-- 返回 { Object },
-  - `copiers` 纯粹 “拷贝” 用图的文件
-  - `prints` 印刷模板，使用方式参见 [`lodash.template()`][lodash.template]
-  - `stockrooms` 第三方仓库，如：[github/gitignore]
+- `copiers` 纯粹 “拷贝” 用图的文件
+- `prints` 印刷模板，使用方式参见 [`lodash.template()`][lodash.template]
+- `stockrooms` 第三方仓库，如：[github/gitignore]
+- `writeGitignoreSync({ output, topics })` 串行方法，在指定位置生成包含指定主题内容的 .gitignore 文件
+- `writeGitignore({ output, topics })` 异步方法，在指定位置生成包含指定主题内容的 .gitignore 文件
 
 ```js
 import { log } from 'console';
-import createTemplates from '@iyowei/create-templates';
+import { copiers， prints， stockrooms， writeGitignoreSync } from '@iyowei/create-templates';
 
-log(createTemplates());
-
-// 返回各种类型模板及路径，{ copiers, prints, stockrooms, ... }
+log(copiers);
 ```
 
-> 返回的都是文件路径。
-
+> `copiers`、`prints`、`stockrooms`返回的都是文件路径。
 
 ## 安装
 
