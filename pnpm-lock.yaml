@@ -1,19 +1,18 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iyowei/fast-gitignore': ^1.0.2
+  '@iyowei/fast-gitignore': ^1.0.4
 
 dependencies:
-  '@iyowei/fast-gitignore': 1.0.2
+  '@iyowei/fast-gitignore': 1.0.4
 
 packages:
 
-  /@iyowei/fast-gitignore/1.0.2:
-    resolution: {integrity: sha512-OEje5HJOWCBwLQXzCSiszvlBkT/1iiiZLO172ZzmOlPzHVkfXcWVi3G5oTGBZ1uR8pA415tKZ0yiZjAPRV0CGw==}
+  /@iyowei/fast-gitignore/1.0.4:
+    resolution: {integrity: sha512-6VPx2q5NzxgaDlx6UGLu9cbVj47HTcnnjsb1X2QZZXWn5Hqx1fL+vCaCTbHf73yQCZ/paYUeLgPLEj6kU5ZPvQ==}
     engines: {node: '>=12.20.0'}
     dependencies:
       arrify: 3.0.0
-      deepmerge: 4.2.2
       fast-glob: 3.2.7
       p-map: 5.3.0
     dev: false
@@ -64,11 +63,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       escape-string-regexp: 5.0.0
-    dev: false
-
-  /deepmerge/4.2.2:
-    resolution: {integrity: sha1-RNLqNnm49NT/ujPwPYZfwee/SVU=, tarball: deepmerge/download/deepmerge-4.2.2.tgz}
-    engines: {node: '>=0.10.0'}
     dev: false
 
   /escape-string-regexp/5.0.0:

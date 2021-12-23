@@ -30,6 +30,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@iyowei/fast-gitignore": "^1.0.2"
+    "@iyowei/fast-gitignore": "^1.0.4"
   }
 }
