@@ -7,11 +7,14 @@ import { fastGitignore, fastGitignoreSync } from '@iyowei/fast-gitignore';
 
 const TPL_DIR = join(dirname(fileURLToPath(import.meta.url)), 'src');
 
-export const copiers = [
-  join(TPL_DIR, '.vscode'),
-  join(TPL_DIR, '.editorconfig'),
-  join(TPL_DIR, '.prettierrc'),
-];
+export const copiers = {
+  common: [
+    join(TPL_DIR, '.vscode'),
+    join(TPL_DIR, '.editorconfig'),
+    join(TPL_DIR, '.prettierrc'),
+  ],
+  esm: [join(TPL_DIR, 'esm/.eslintrc.json')],
+};
 
 export const prints = {
   readme: join(TPL_DIR, 'README.md'),
