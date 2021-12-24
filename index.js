@@ -81,6 +81,33 @@ export function writeNpmRc({ output, data }) {
   });
 }
 
+export function writeReadmeSync({ output, data }) {
+  printSync({
+    data,
+    outputPath: output,
+
+    templatePath: prints.readme,
+  });
+}
+
+export function writeReadme({ output, data }) {
+  return new Promise((resolve, reject) => {
+    print({
+      data,
+      outputPath: output,
+
+      templatePath: prints.readme,
+    }).then(
+      (payload) => {
+        resolve(payload);
+      },
+      (err) => {
+        reject(err);
+      },
+    );
+  });
+}
+
 export function printSync({ outputPath, templatePath, data, options = {} }) {
   writeFileSync(
     outputPath,

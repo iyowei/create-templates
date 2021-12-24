@@ -150,6 +150,46 @@ import { writeNpmRc } from '@iyowei/create-templates';
 })();
 ```
 
+### `writeReadmeSync({ output, data })`
+
+串行方法，在指定位置生成 README.md 文件。
+
+- `output` { String } 输出位置，包含输出文件名，例如：`/Users/iyowei/Development/iyowei/README.md`
+- `data` { Object} 用来填充[模板][lodash.template]的数据
+
+```js
+import { writeReadmeSync } from '@iyowei/create-templates';
+
+writeReadmeSync({
+  output: join(process.cwd(), 'README.md'),
+  data: {
+    name: 'iyowei',
+    description: 'balabala...',
+  },
+});
+```
+
+### `writeReadme({ output, data })`
+
+异步方法，在指定位置生成 README.md 文件。
+
+- `output` { String } 输出位置，包含输出文件名，例如：`/Users/iyowei/Development/iyowei/README.md`
+- `data` { Object} 用来填充[模板][lodash.template]的数据
+
+```js
+import { writeReadme } from '@iyowei/create-templates';
+
+(async () => {
+  await writeReadme({
+    output: join(process.cwd(), 'README.md'),
+    data: {
+      name: 'iyowei',
+      description: 'balabala...',
+    },
+  });
+})();
+```
+
 ## 安装
 
 <!-- 标明支持的宿主、宿主版本，模块类型 -->
