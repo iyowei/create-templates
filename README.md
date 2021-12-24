@@ -4,20 +4,151 @@
 
 ## 使用
 
-- `copiers` 纯粹 “拷贝” 用图的文件
-- `prints` 印刷模板，使用方式参见 [`lodash.template()`][lodash.template]
-- `stockrooms` 第三方仓库，如：[github/gitignore]
-- `writeGitignoreSync({ output, topics })` 串行方法，在指定位置生成包含指定主题内容的 .gitignore 文件
-- `writeGitignore({ output, topics })` 异步方法，在指定位置生成包含指定主题内容的 .gitignore 文件
+### `copiers`
+
+- 返回 { Array } 纯粹 “拷贝” 用途的模板文件。
 
 ```js
 import { log } from 'console';
-import { copiers， prints， stockrooms， writeGitignoreSync } from '@iyowei/create-templates';
+import { copiers } from '@iyowei/create-templates';
 
 log(copiers);
+
+/**
+ * [
+ *   '/Users/iyowei/Development/iyowei/create-templates/src/.vscode',
+ *   '/Users/iyowei/Development/iyowei/create-templates/src/.editorconfig',
+ *   ...
+ * ]
+ */
 ```
 
-> `copiers`、`prints`、`stockrooms`返回的都是文件路径。
+### `prints`
+
+- 返回 { Object } 印刷模板，使用方式参见 [`lodash.template()`][lodash.template]。
+
+```js
+import { log } from 'console';
+import { prints } from '@iyowei/create-templates';
+
+log(prints);
+
+/**
+ * {
+ *   readme: '/Users/iyowei/Development/iyowei/create-templates/src/README.md',
+ *   npmrc: '/Users/iyowei/Development/iyowei/create-templates/src/.npmrc',
+ *   ...
+ * }
+ */
+```
+
+### `stockrooms`
+
+- 返回 { Object } 第三方仓库，如：[github/gitignore][github/gitignore]。
+
+```js
+import { log } from 'console';
+import { stockrooms } from '@iyowei/create-templates';
+
+log(stockrooms);
+
+/**
+ * {
+ *   gitignore: '/Users/iyowei/Development/iyowei/create-templates/src/gitignore',
+ *   ...
+ * }
+ */
+```
+
+### `writeGitignoreSync({ output, topics })`
+
+在指定位置生成包含指定主题内容的 .gitignore 文件。
+
+- `output` { String } 输出位置，包含输出文件名，例如：`/Users/iyowei/Development/iyowei/.gitignore`
+- `topics` { Array | String } [github/gitignore][github/gitignore] 里模板文件的文件名，单个或者集合
+
+```js
+import { writeGitignoreSync } from '@iyowei/create-templates';
+
+writeGitignoreSync({
+  output: join(process.cwd(), '.gitignore'),
+  topics: [
+    'macOS',
+    'Windows',
+    'Linux',
+    'Node',
+    'VisualStudioCode',
+    'SublimeText',
+    'CVS',
+    'Diff',
+    'Vim',
+    'TortoiseGit',
+  ],
+});
+```
+
+### `writeGitignore({ output, topics })`
+
+异步方法，在指定位置生成包含指定主题内容的 .gitignore 文件。
+
+- `output` { String } 输出位置，包含输出文件名，例如：`/Users/iyowei/Development/iyowei/.gitignore`
+- `topics` { Array | String } [github/gitignore][github/gitignore] 里模板文件的文件名，单个或者集合
+
+```js
+import { writeGitignore } from '@iyowei/create-templates';
+
+(async () => {
+  await writeGitignore({
+    output: join(process.cwd(), '.gitignore'),
+    topics: [
+      'macOS',
+      'Windows',
+      'Linux',
+      'Node',
+      'VisualStudioCode',
+      'SublimeText',
+      'CVS',
+      'Diff',
+      'Vim',
+      'TortoiseGit',
+    ],
+  });
+})();
+```
+
+### `writeNpmRcSync({ output, data })`
+
+串行方法，在指定位置生成 .npmrc 文件。
+
+- `output` { String } 输出位置，包含输出文件名，例如：`/Users/iyowei/Development/iyowei/.npmrc`
+- `data` { Object} 用来填充[模板][lodash.template]的数据
+
+```js
+import { writeNpmRcSync } from '@iyowei/create-templates';
+
+writeNpmRcSync({
+  output: join(process.cwd(), '.npmrc'),
+  data: { namespace: 'iyowei' },
+});
+```
+
+### `writeNpmRc({ output, data })`
+
+异步方法，在指定位置生成 .npmrc 文件。
+
+- `output` { String } 输出位置，包含输出文件名，例如：`/Users/iyowei/Development/iyowei/.npmrc`
+- `data` { Object} 用来填充[模板][lodash.template]的数据
+
+```js
+import { writeNpmRc } from '@iyowei/create-templates';
+
+(async () => {
+  await writeNpmRc({
+    output: join(process.cwd(), '.npmrc'),
+    data: { namespace: '' },
+  });
+})();
+```
 
 ## 安装
 
