@@ -6,7 +6,9 @@
 
 ### `copiers`
 
-- 返回 { Array } 纯粹 “拷贝” 用途的模板文件。
+- 返回 { Object } 纯粹 “拷贝” 用途的模板文件
+  - `common` 通用用途文件列表
+  - `esm` [ESM][ECMAScript Module] 模块用途的文件列表
 
 ```js
 import { log } from 'console';
@@ -15,9 +17,15 @@ import { copiers } from '@iyowei/create-templates';
 log(copiers);
 
 /**
- * [
- *   '/Users/iyowei/Development/iyowei/create-templates/src/.vscode',
- *   '/Users/iyowei/Development/iyowei/create-templates/src/.editorconfig',
+ * {
+ *   common: [
+ *     '/Users/iyowei/Development/iyowei/create-templates/src/.vscode',
+ *     '/Users/iyowei/Development/iyowei/create-templates/src/.editorconfig',
+ *     ...
+ *   ],
+ *   esm: [
+ *     ...
+ *   ],
  *   ...
  * ]
  */
@@ -226,8 +234,10 @@ yarn add @iyowei/create-templates
 [download node.js]: https://nodejs.org/en/download/
 [esm]: https://img.shields.io/badge/ESM-brightgreen?style=flat
 [prs welcome badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
+
 [create-esm]: https://github.com/iyowei/create-esm
 [github/gitignore]: https://github.com/github/gitignore
 [lodash.template]: https://lodash.com/docs/4.17.15#template
+[ECMAScript Module]: https://nodejs.org/docs/latest-v12.x/api/esm.html
 
 <!-- 更多文档细节，参考 https://github.com/iyowei/readme-templates -->
