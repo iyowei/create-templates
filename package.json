@@ -30,7 +30,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@iyowei/fast-gitignore": "^1.0.4",
+    "@iyowei/fast-gitignore": "^1.0.5",
     "lodash.template": "^4.5.0"
   }
 }
