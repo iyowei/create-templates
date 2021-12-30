@@ -8,7 +8,7 @@
 
 - 返回 { Object } 纯粹 “拷贝” 用途的模板文件
   - `common` 通用用途文件列表
-  - `esm` [ESM][ECMAScript Module] 模块用途的文件列表
+  - `esm` [ESM][ecmascript module] 模块用途的文件列表
 
 ```js
 import { log } from 'console';
@@ -222,6 +222,15 @@ pnpm add @iyowei/create-templates
 yarn add @iyowei/create-templates
 ```
 
+## 参考
+
+### ".github" 文件夹
+
+- [为仓库创建拉取请求模板][为仓库创建拉取请求模板]；
+- [为仓库配置议题模板][为仓库配置议题模板]；
+- [GitHub 表单架构的语法][github 表单架构的语法]；
+- [创建议题模板的旧工作流程][创建议题模板的旧工作流程]；
+
 ## 参与贡献
 
 ![PRs Welcome][prs welcome badge]
@@ -230,14 +239,17 @@ yarn add @iyowei/create-templates
 
 "@iyowei/create-templates" 使用 [@iyowei/create-esm][create-esm] 脚手架生成。
 
+[创建议题模板的旧工作流程]: https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/manually-creating-a-single-issue-template-for-your-repository
+[为仓库配置议题模板]: https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms
+[github 表单架构的语法]: https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+[为仓库创建拉取请求模板]: https://docs.github.com/cn/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
 [node version badge]: https://img.shields.io/badge/node.js-%3E%3D12.20.0-brightgreen?style=flat&logo=Node.js
 [download node.js]: https://nodejs.org/en/download/
 [esm]: https://img.shields.io/badge/ESM-brightgreen?style=flat
 [prs welcome badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
-
 [create-esm]: https://github.com/iyowei/create-esm
 [github/gitignore]: https://github.com/github/gitignore
 [lodash.template]: https://lodash.com/docs/4.17.15#template
-[ECMAScript Module]: https://nodejs.org/docs/latest-v12.x/api/esm.html
+[ecmascript module]: https://nodejs.org/docs/latest-v12.x/api/esm.html
 
 <!-- 更多文档细节，参考 https://github.com/iyowei/readme-templates -->

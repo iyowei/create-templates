@@ -1,0 +1,43 @@
+name: 功能申请
+description: 欢迎！欢迎！热烈欢迎！
+title: "[新功能]: "
+labels: ["feature"]
+assignees:
+  - "itonyyo"
+body:
+  - type: textarea
+    id: requirement
+    attributes:
+      label: 需求
+      description: 详细描述、添加截图或录屏来帮助解释您的问题。
+    validations:
+      required: true
+  - type: textarea
+    id: scene
+    attributes:
+      label: 场景
+      description: 什么场景下让你产生了这个需要，我非常感兴趣。
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: 案例
+      description: 在其它平台是否有类似的功能，可以帮助我更好地理解你的需要。
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 如果需要更多的信息，怎样才能和您联系？（格式：微信 - iyoooooooo）
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 行为规范
+      description: 您同意遵守这个项目的行为准则吗？
+      options:
+        - label: 我同意遵守这个项目的行为准则
+          required: true
