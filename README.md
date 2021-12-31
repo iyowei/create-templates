@@ -7,8 +7,9 @@
 ### `copiers`
 
 - 返回 { Object } 纯粹 “拷贝” 用途的模板文件
-  - `common` 通用用途文件列表
-  - `esm` [ESM][ecmascript module] 模块用途的文件列表
+  - `common` { Array } 通用用途文件列表
+  - `esm` { Array } [ESM][ecmascript module] 模块用途的文件列表
+  - `mocha` { String } mocha.js 配置文件模板
 
 ```js
 import { log } from 'console';
