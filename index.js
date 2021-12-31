@@ -12,6 +12,7 @@ export const copiers = {
     join(TPL_DIR, '.vscode'),
     join(TPL_DIR, '.editorconfig'),
     join(TPL_DIR, '.prettierrc'),
+    join(TPL_DIR, '.nvmrc'),
   ],
   esm: [join(TPL_DIR, 'esm/.eslintrc.json')],
 };
