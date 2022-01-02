@@ -60,6 +60,35 @@ export function writeGitignore({ output, topics }) {
   });
 }
 
+export function printSync({ outputPath, templatePath, data, options = {} }) {
+  writeFileSync(
+    outputPath,
+    template(readFileSync(templatePath, { encoding: 'utf-8' }), options)(data),
+  );
+}
+
+export function print({ outputPath, templatePath, data, options = {} }) {
+  return new Promise((resolve, reject) => {
+    readFile(templatePath, 'utf-8', (err, tpl) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      const compiled = template(tpl, options)(data);
+
+      writeFile(outputPath, compiled, (er) => {
+        if (er) {
+          reject(er);
+          return;
+        }
+
+        resolve(true);
+      });
+    });
+  });
+}
+
 export function writeNpmRcSync({ output, data }) {
   printSync({
     data,
@@ -111,34 +140,5 @@ export function writeReadme({ output, data }) {
         reject(err);
       },
     );
-  });
-}
-
-export function printSync({ outputPath, templatePath, data, options = {} }) {
-  writeFileSync(
-    outputPath,
-    template(readFileSync(templatePath, { encoding: 'utf-8' }), options)(data),
-  );
-}
-
-export function print({ outputPath, templatePath, data, options = {} }) {
-  return new Promise((resolve, reject) => {
-    readFile(templatePath, 'utf-8', (err, tpl) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      const compiled = template(tpl)(data);
-
-      writeFile(outputPath, compiled, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        resolve(true);
-      });
-    });
   });
 }

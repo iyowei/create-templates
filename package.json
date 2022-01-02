@@ -3,7 +3,10 @@
   "version": "1.0.12",
   "description": "统一提供模板，额外提供与模板紧密相关、有用的帮助函数。无论是创建 Cli、React、Node、Vue、Electron 等等之中的哪一个项目，都会需要用到模板，而这些模板文件也大都相同，小异可以维护在各自专门的脚手架中。",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "format": "npx prettier '**/*.{js,mjs,json,md}' --write --loglevel error",
+    "lint": "npx eslint '**/*.js'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iyowei/create-templates.git"
@@ -32,5 +35,12 @@
   "dependencies": {
     "@iyowei/fast-gitignore": "^1.0.5",
     "lodash.template": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "prettier": "^2.5.1"
   }
 }
