@@ -10,6 +10,7 @@
   - `common` { Array } 通用用途文件列表
   - `esm` { Array } [ESM][ecmascript module] 模块用途的文件列表
   - `mocha` { String } mocha.js 配置文件模板
+  - `benchmark` { String } 文件脚本
 
 ```js
 import { log } from 'console';
