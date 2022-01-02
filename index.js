@@ -16,6 +16,7 @@ export const copiers = {
   ],
   esm: [join(TPL_DIR, 'esm/.eslintrc.json')],
   mocha: join(TPL_DIR, '.mocharc.json'),
+  bennchmark: join(TPL_DIR, 'bennchmark.js'),
 };
 
 export const prints = {
