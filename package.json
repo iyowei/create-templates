@@ -1,6 +1,6 @@
 {
   "name": "@iyowei/create-templates",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "统一提供模板，额外提供与模板紧密相关、有用的帮助函数。无论是创建 Cli、React、Node、Vue、Electron 等等之中的哪一个项目，都会需要用到模板，而这些模板文件也大都相同，小异可以维护在各自专门的脚手架中。",
   "main": "index.js",
   "scripts": {
