@@ -14,7 +14,9 @@ export const copiers = {
     join(TPL_DIR, '.prettierrc'),
     join(TPL_DIR, '.nvmrc'),
   ],
-  esm: [join(TPL_DIR, 'esm/.eslintrc.json')],
+  eslintrc: {
+    esm: join(TPL_DIR, 'esm/.eslintrc.json')
+  },
   mocha: join(TPL_DIR, '.mocharc.json'),
   benchmark: join(TPL_DIR, 'benchmark.js'),
 };
